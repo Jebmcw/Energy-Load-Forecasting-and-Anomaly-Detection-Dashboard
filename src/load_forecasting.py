@@ -33,6 +33,6 @@ plt.savefig('outputs/forecast_plot.png')
 plt.show()
 
 # Export to Excel: full data + summary stats
-with pd.ExcelWriter('outputs/load_summary.xlsx') as writer:
+with pd.ExcelWriter('data/load_summary.xlsx') as writer:
     df.to_excel(writer, index=False, sheet_name='Full Data')
     df.describe().to_excel(writer, sheet_name='Summary Stats')
